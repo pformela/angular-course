@@ -1,0 +1,20 @@
+.btn {
+  padding: 8px 20px 8px 20px;
+  font-size: 16px;
+  background-color: aquamarine;
+  border: 2px solid rgb(0, 148, 148);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgba(0, 148, 148, 0.603);
+  cursor: pointer;
+}
+
+.secret {
+  color: rgb(192, 192, 192);
+}
+
+.logs {
+  color: white;
+}

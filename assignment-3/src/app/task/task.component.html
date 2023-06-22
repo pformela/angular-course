@@ -1,0 +1,12 @@
+<button class="btn" (click)="changeVisibility()">Display Details</button>
+<p *ngIf="isVisible" class="secret">Secret Password = tuna</p>
+<p *ngIf="!isVisible">Nothing to see here</p>
+<ol>
+  <li *ngFor="let log of logs; let idx = index">
+    <span
+      [ngStyle]="{ backgroundColor: idx > 3 ? 'blue' : 'white' }"
+      [ngClass]="{ logs: idx > 3 }"
+      >{{ log }}</span
+    >
+  </li>
+</ol>

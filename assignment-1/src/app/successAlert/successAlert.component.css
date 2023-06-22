@@ -1,0 +1,25 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 8px 16px 8px 16px;
+  margin: 8px auto 8px auto;
+  width: max-content;
+  min-width: 160px;
+  font-weight: bold;
+}
+
+.success {
+  border: 2px solid rgb(0, 255, 0);
+  background-color: rgb(125, 255, 125);
+  color: black;
+}
+
+.message {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: black;
+}
