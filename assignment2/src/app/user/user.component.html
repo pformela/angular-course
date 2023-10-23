@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="form-floating">
+      <input
+        id="username"
+        type="text"
+        class="form-control"
+        [(ngModel)]="username"
+      />
+      <label for="username">Enter username</label>
+      <button
+        class="btn btn-danger"
+        [disabled]="username.length === 0"
+        (click)="onResetUsername()"
+      >
+        Reset user
+      </button>
+    </div>
+    <div class="row">
+      <p>Username: {{ username }}</p>
+    </div>
+  </div>
+</div>
