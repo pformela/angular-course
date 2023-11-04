@@ -1,0 +1,38 @@
+.completed {
+  color: limegreen;
+  text-decoration: line-through;
+}
+
+.details-button {
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: rgba(0, 0, 160);
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  width: 12rem;
+}
+
+.details-button:hover {
+  background-color: rgba(0, 0, 160, 0.7);
+  font-weight: 600;
+}
+
+.secret-password {
+  font-size: 1rem;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  font-weight: 600;
+  color: red;
+}
+
+.secret-password-hidden {
+  font-size: 1rem;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  font-weight: 600;
+  color: gray;
+}
+
+.log {
+  color: white;
+}
