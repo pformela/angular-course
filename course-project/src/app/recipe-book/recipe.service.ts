@@ -42,4 +42,8 @@ export class RecipeService {
     this.selectedRecipe = recipe;
     this.selectedRecipeChanged.emit(recipe);
   }
+
+  public getRecipeById(id: string): Recipe | undefined {
+    return this.recipes.find((recipe: Recipe) => recipe.id === id) || undefined;
+  }
 }

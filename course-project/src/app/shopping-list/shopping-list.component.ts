@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from './shopping-list.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-list',
@@ -10,7 +11,11 @@ import { ShoppingListService } from './shopping-list.service';
 export class ShoppingListComponent implements OnInit {
   public ingredients: Ingredient[] = [];
 
-  public constructor(private shoppingListService: ShoppingListService) {}
+  public constructor(
+    private shoppingListService: ShoppingListService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   public ngOnInit(): void {
     this.ingredients = this.shoppingListService.getIngredients();
@@ -21,5 +26,9 @@ export class ShoppingListComponent implements OnInit {
 
   public onIngredientAdded(ingredient: Ingredient): void {
     this.shoppingListService.addIngredient(ingredient);
+  }
+
+  public onNavigateToAddIngredient(): void {
+    this.router.navigate(['add'], { relativeTo: this.route });
   }
 }

@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <img [src]="recipe.imagePath" alt="" class="img-responsive" />
+    <img [src]="recipe ? recipe.imagePath : ''" alt="" class="img-responsive" />
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{ recipe.name }}</h1>
+    <h1>{{ recipe ? recipe.name : "" }}</h1>
   </div>
 </div>
 <div class="row">
@@ -25,12 +25,15 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">{{ recipe.description }}</div>
+  <div class="col-xs-12">{{ recipe ? recipe.description : "" }}</div>
 </div>
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of recipe ? recipe.ingredients : []"
+      >
         {{ ingredient.name }} ({{ ingredient.amount }})
       </li>
     </ul>

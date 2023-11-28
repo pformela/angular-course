@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -13,7 +14,11 @@ export class ShoppingListEditComponent {
   @ViewChild('amountInput', { static: false })
   public amountInputRef: ElementRef = new ElementRef('');
 
-  public constructor(private shoppingListService: ShoppingListService) {}
+  public constructor(
+    private shoppingListService: ShoppingListService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   public onAddItem(): void {
     const ingredientName: string = this.nameInputRef.nativeElement.value;
@@ -24,5 +29,7 @@ export class ShoppingListEditComponent {
     );
 
     this.shoppingListService.addIngredient(newIngredient);
+
+    this.router.navigate(['../'], { relativeTo: this.route });
   }
 }
