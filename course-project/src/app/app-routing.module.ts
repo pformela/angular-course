@@ -5,13 +5,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RecipeListComponent } from './recipe-book/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   {
     path: 'recipes',
+    component: RecipeBookComponent,
     children: [
-      { path: '', component: RecipeListComponent },
       { path: ':id', component: RecipeDetailComponent },
       {
         path: ':id/not-found',
