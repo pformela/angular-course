@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { ServerElementComponent } from './server-element/server-element.component';
+import { ServerElementComponent } from './cockpit/server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 
 @NgModule({
